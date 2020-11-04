@@ -46,7 +46,7 @@ model = ReformerLM(
     attn_chunks = 8,      # process lsh attention in chunks, only way for memory to fit when scaling to 16k tokens
     num_mem_kv = 128,       # persistent learned memory key values, from all-attention paper
     twin_attention = False, # both branches of the reversible network will be attention
-    full_attn_thres = 1024, # use full attention if context length is less than set value
+    full_attn_threshold = 1024, # use full attention if context length is less than set value
     reverse_thres = 1024,   # turn off reversibility for 2x speed for sequence lengths shorter or equal to the designated value
     use_scale_norm = False,  # use scale norm from 'Transformers without tears' paper
     use_rezero = False,      # remove normalization and use rezero from 'ReZero is All You Need'
@@ -412,7 +412,7 @@ model = ReformerLM(
     max_seq_len = 4096,
     lsh_dropout = 0.1,
     causal = True,
-    full_attn_thres = 1024
+    full_attn_threshold = 1024
 )
 
 # 0 is used for padding and no loss to be calculated on it

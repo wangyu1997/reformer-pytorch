@@ -1,14 +1,13 @@
-from reformer_pytorch import ReformerLM
-from reformer_pytorch.generative_tools import TrainingWrapper
-
-import random
-import tqdm
 import gzip
+import random
+
 import numpy as np
 import torch
-import torch.optim as optim
-from torch.nn import functional as F
+import tqdm
 from torch.utils.data import DataLoader, Dataset
+
+from reformer_pytorch import ReformerLM
+from reformer_pytorch.generative_tools import TrainingWrapper
 
 # constants
 
